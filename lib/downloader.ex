@@ -1,8 +1,12 @@
 defmodule Downloader do
   def main(args) do
+    track_list_file_name = track_list_file_name(args)
+    Downloader.TrackList.get(track_list_file_name)
+  end
+
+  defp track_list_file_name(args) do
     parsed_args = parse_args(args)
-    file_name = List.first(parsed_args[:params])
-    Downloader.TrackList.get(file_name)
+    List.first(parsed_args[:params])
   end
 
   defp parse_args(args) do
