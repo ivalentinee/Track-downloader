@@ -1,4 +1,4 @@
-# Tracks Downloader
+# Track Downloader
 
 ## Building app
 ```sh
